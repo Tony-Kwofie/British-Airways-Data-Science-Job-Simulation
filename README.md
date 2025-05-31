@@ -1,83 +1,88 @@
 # British Airways Data Science Job Simulation (Forage)
 
-🚀 **Project Title:** Predicting Customer Booking Behavior
-
-📅 **Completion Date:** May 30, 2025  
-🎓 **Program:** Forage x British Airways Data Science Job Simulation  
-📍 **Author:** Anthony Eddei Kwofie
-
----
-
-## 🧠 Objective
-
-The goal of this project is to predict the likelihood of a customer completing a flight booking, using historical booking data from British Airways.
+🚀 **Project:** Predicting Flight Booking Behavior  
+📅 **Completed:** May 30, 2025  
+👤 **Author:** Anthony Eddei Kwofie  
+📚 **Program:** British Airways x Forage Job Simulation
 
 ---
 
-## 📊 Dataset Summary
+## 📌 Objective
 
-- Source: Simulated customer booking data from Forage
-- Key fields: `purchase_lead`, `flight_duration`, `booking_origin`, `length_of_stay`, etc.
-- Class Imbalance: Only ~15% of records were positive bookings
+Build a classification model to predict whether a customer will complete a flight booking using British Airways' historical customer data.
 
 ---
 
-## ⚙️ Workflow
+## 🔍 Dataset Overview
 
-1. **Data Cleaning & Preprocessing**
-   - One-hot encoding of categorical variables
-   - Train-test split (80/20)
-   - SMOTE applied to handle class imbalance
+- Simulated data from Forage
+- Target: `booking_complete` (binary)
+- Key Features: `purchase_lead`, `flight_duration`, `length_of_stay`, `booking_origin`
+- Notable issue: Class imbalance (~15% positive class)
 
-2. **Modeling**
-   - Model: Random Forest Classifier
-   - Reason: High interpretability, handles mixed data types well
+---
 
-3. **Evaluation**
+## ⚙️ Approach
+
+1. **Preprocessing:**
+   - Categorical encoding
+   - Outlier detection
+   - Feature scaling (if applicable)
+2. **Balancing:**
+   - Applied SMOTE for balanced training data
+3. **Modeling:**
+   - Algorithm: Random Forest Classifier
+   - Training/Test Split: 80/20
+4. **Evaluation Metrics:**
    - Accuracy: 84%
-   - Precision: 0.45 | Recall: 0.23 | F1 Score: 0.30
-   - Confusion matrix and feature importance charts included
+   - Recall: 23%
+   - F1 Score: 0.30
 
 ---
 
-## 🔍 Insights
+## 📊 Visuals
 
-- Passengers from Malaysia had a higher booking rate
-- Early purchases and longer stays correlated with successful bookings
+- ✅ Confusion Matrix
+- ✅ Feature Importance Plot
+
+Visuals stored in the `/plots/` directory.
 
 ---
 
-## 📈 Visualizations
+## 🧠 Key Findings
 
-- Confusion Matrix
-- Feature Importance Chart
+- **Booking Origin (e.g. Malaysia)** is a strong predictor of conversion.
+- Longer stays and early purchases increase booking likelihood.
+- Class imbalance significantly impacts recall.
 
 ---
 
 ## ✅ Recommendations
 
-- Explore alternative models (XGBoost, Logistic Regression)
-- Improve class balance techniques
-- Tune hyperparameters and prediction threshold
+- Explore alternative models: XGBoost, Logistic Regression
+- Tune model threshold for business-oriented recall
+- Consider richer feature engineering (e.g. temporal trends)
 
 ---
 
-## 🛠️ Tools Used
+## 💻 Tools Used
 
-- Python (Pandas, Scikit-learn, Imbalanced-learn)
-- Jupyter Notebook
-- Matplotlib & Seaborn
+- Python (Jupyter Notebook)
+- Scikit-learn, Pandas, Matplotlib, Seaborn
+- imbalanced-learn (SMOTE)
 
 ---
 
-## 📁 Repository Contents
+## 📁 Repository Structure
 
-| Folder | Description |
-|--------|-------------|
-| `notebooks/` | Data preprocessing, modeling code |
-| `plots/` | Evaluation visualizations |
-| `presentation/` | Summary slides |
-| `requirements.txt` | Python packages used |
+| Folder        | Description                          |
+|---------------|--------------------------------------|
+| `notebooks/`  | Jupyter Notebook with full workflow  |
+| `plots/`      | Model evaluation visualizations      |
+| `presentation/` | Summary slide for stakeholder review |
+| `data/`       | Data description or access info      |
+| `README.md`   | Project overview                     |
+| `requirements.txt` | List of dependencies            |
 
 ---
 
@@ -85,4 +90,4 @@ The goal of this project is to predict the likelihood of a customer completing a
 
 **Anthony Eddei Kwofie**  
 📧 tonyjnr1990@gmail.com  
-🔗 [LinkedIn](https://www.linkedin.com/in/your-profile)  
+🔗 [LinkedIn](https://www.linkedin.com/in/your-profile)
